@@ -2,6 +2,17 @@
     .nav__links {
         gap: 40px;
     }
+    .header__elements{
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 40px;
+    }
+    .header__info{
+        text-align: center;
+    }
+    .header__info p{
+        max-width: 100%;
+    }
 }
 @media (max-width:768px) {
     .hamburger {
@@ -54,4 +65,17 @@
         color: var(--color1);
     }
 
+    .header__info{
+        min-width: 100%;
+        width: 100%;
+    }
+
+}
+@media (max-width:525px){
+    h1{
+        font-size: 46px;
+    }
+    .header__stat p,.header__stat span{
+        font-size: 24px;
+    }
 }
