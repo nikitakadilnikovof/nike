@@ -49,6 +49,9 @@
     .hide img{
         position: relative;
     }
+    .header__stat{
+        justify-content: center;
+    }
 }
 @media (max-width:768px) {
     .hamburger {
@@ -104,6 +107,9 @@
     .header__info{
         min-width: 100%;
         width: 100%;
+    }
+    .about-us__foto img {
+        transform: translate(-7%, -18%);
     }
 
 }
