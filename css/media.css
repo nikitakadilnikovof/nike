@@ -111,7 +111,22 @@
     .about-us__foto img {
         transform: translate(-7%, -18%);
     }
-
+    .sneakers-list {
+        width: 100vw;
+        transform: translateX(-20px);
+    }
+    .sneakers-cart{
+        width: 80vw;
+    }
+    .sneakers-cart__info{
+        padding: 16px 16px;
+    }
+   .categories__button span{
+    display: none;
+   }
+   .categories__button button{
+    padding: 10px 20px;
+   }
 }
 @media (max-width:525px){
     h1{
@@ -119,5 +134,11 @@
     }
     .header__stat p,.header__stat span{
         font-size: 24px;
+    }
+    .sneakers-cart{
+        width: 80vw;
+    }
+    .sneakers-cart__info{
+        padding: 16px 16px;
     }
 }
