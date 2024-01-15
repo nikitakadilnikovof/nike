@@ -8,9 +8,13 @@ body {
     font-family: 'Comfortaa', sans-serif;
     overflow-x: hidden;
 }
+body.no-scroll{
+    overflow: hidden;
+}
 
-a {
+a,button {
     text-decoration: none;
+    -webkit-tap-highlight-color: #ffffff00;
 }
 
 h1,
@@ -613,14 +617,14 @@ section {
     max-width: 260px;
 }
 .all .sneakers-cart{
-    display: block;
+    display: flex;
 }
 .boots-list .boots{
-    display: block;
+    display: flex;
 }
 .women .women {
-    display: block;
+    display: flex;
 }
 .men .men{
-    display: block;
+    display: flex;
 }
