@@ -2,19 +2,22 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    -webkit-tap-highlight-color: #ffffff00;
+    user-select: none;
 }
 
 body {
     font-family: 'Comfortaa', sans-serif;
     overflow-x: hidden;
 }
-body.no-scroll{
+
+body.no-scroll {
     overflow: hidden;
 }
 
-a,button {
+a,
+button {
     text-decoration: none;
-    -webkit-tap-highlight-color: #ffffff00;
 }
 
 h1,
@@ -36,6 +39,15 @@ h2 span {
     color: var(--color3);
 }
 
+hr {
+    border: none;
+}
+
+path {
+    transition: 0.5s;
+    fill: rgba(34, 139, 34, 0);
+}
+
 .light-theme {
     --color1: #FEFFF6;
     --color2: #313131;
@@ -53,6 +65,7 @@ h2 span {
     --color5: #E0E3CA;
     --color6: #848d3d26;
 }
+
 body::-webkit-scrollbar {
     width: 6px;
 
@@ -482,20 +495,21 @@ section {
     color: var(--color1);
 }
 
-.sneakers-list{
+.sneakers-list {
     display: flex;
     gap: 20px;
     overflow-x: auto;
-    padding: 15px; 
+    padding: 15px;
     transform: translateX(-20px);
     width: calc(100% + 40px);
 }
-.sneakers-list::-webkit-scrollbar {
+
+.sneakers-list::-webkit-scrollbar,.new-model__sneakers-list::-webkit-scrollbar{
     width: 6px;
 
 }
 
-.sneakers-list::-webkit-scrollbar-thumb {
+.sneakers-list::-webkit-scrollbar-thumb,.new-model__sneakers-list::-webkit-scrollbar-thumb{
     background: var(--color3);
     border-radius: 4px;
 }
@@ -523,7 +537,7 @@ section {
 
 }
 
-.sneakers-cart__foto img{
+.sneakers-cart__foto img {
     width: 80%;
 }
 
@@ -536,7 +550,7 @@ section {
     flex-grow: 1;
 }
 
-.sneakers-cart__like {
+.sneakers-cart .like {
     position: absolute;
     right: 20px;
     top: 20px;
@@ -613,18 +627,172 @@ section {
     font-weight: 700;
     line-height: 24px;
 }
-.sneakers-cart__description p{
+
+.sneakers-cart__description p {
     max-width: 260px;
 }
-.all .sneakers-cart{
+
+.all .sneakers-cart {
     display: flex;
 }
-.boots-list .boots{
+
+.boots-list .boots {
     display: flex;
 }
+
 .women .women {
     display: flex;
 }
-.men .men{
+
+.men .men {
     display: flex;
 }
+
+.new-model__cart {
+    width: 340px;
+    height: 220px;
+    border-radius: 20px;
+    transition: 0.5s;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.newModel-cart__bg {
+    width: 340px;
+    height: 220px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: 0.5s;
+    border-radius: 20px;
+}
+
+.newModel-cart__bg img {
+    position: absolute;
+    transform: rotate(-30deg);
+    top: 70px;
+    right: -50px;
+    transition: 0.5s;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.new-model__cart:hover .newModel-cart__bg {
+    height: 320px;
+}
+
+.new-model__cart:hover img {
+    transform: rotate(0deg);
+    top: 20px;
+    right: 30px;
+}
+
+.newModel-cart__bg button {
+    font-family: Comfortaa;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    display: inline-flex;
+    padding: 5px 5px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+    background: var(--color1);
+    border: 1px solid var(--color1);
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    width: 106px;
+    transition: 0.5s;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.newModel-cart__bg button:hover {
+    background-color: transparent;
+    color: var(--color1) !important;
+}
+
+.new-model__cart:hover button {
+    width: calc(100% - 40px);
+}
+
+.newModel-cart__info {
+    display: flex;
+    width: 200px;
+    gap: 10px;
+    flex-direction: column;
+    left: 20px;
+    top: 20px;
+    position: absolute;
+    transition: 0.5s;
+    z-index: 1;
+}
+
+.newModel-cart__info h3 {
+    color: var(--color1);
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.newModel-cart__info p {
+    color: var(--color1);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.newModel-cart__info span {
+    color: var(--white, #FEFFF6);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+}
+
+.newModel-cart__info hr {
+    width: 1px;
+    height: 16px;
+    opacity: 0.5;
+    background: var(--color1);
+}
+
+.newModel-cart__info i {
+    font-size: 16px;
+    color: var(--color1);
+}
+
+.newModel-cart__info div {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.new-model__cart:hover .newModel-cart__info {
+    top: 158px;
+}
+
+.newModel-cart svg {
+    top: 20px;
+    right: 20px;
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.new-model__cart:hover svg {
+    opacity: 1;
+}
+
+.like_active path {
+    fill: var(--color1);
+}
+
+.new-model__sneakers-list {
+    display: flex;
+    gap: 109px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 120px 20px 20px 20px;
+    width:calc(100% + 40px);
+    transform: translateX(-20px);
+}   
