@@ -381,6 +381,7 @@ h1 span {
 section {
     padding: 60px 0 60px 0;
     overflow: hidden;
+    background-color: var(--color1);
 }
 
 .about-us__elements {
@@ -504,12 +505,14 @@ section {
     width: calc(100% + 40px);
 }
 
-.sneakers-list::-webkit-scrollbar,.new-model__sneakers-list::-webkit-scrollbar{
+.sneakers-list::-webkit-scrollbar,
+.new-model__sneakers-list::-webkit-scrollbar {
     width: 6px;
 
 }
 
-.sneakers-list::-webkit-scrollbar-thumb,.new-model__sneakers-list::-webkit-scrollbar-thumb{
+.sneakers-list::-webkit-scrollbar-thumb,
+.new-model__sneakers-list::-webkit-scrollbar-thumb {
     background: var(--color3);
     border-radius: 4px;
 }
@@ -793,6 +796,52 @@ section {
     overflow-x: auto;
     overflow-y: hidden;
     padding: 120px 20px 20px 20px;
-    width:calc(100% + 40px);
+    width: calc(100% + 40px);
     transform: translateX(-20px);
-}   
+}
+
+.footer__item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 300px;
+}
+
+.footer__item a {
+    color: var(--color1);
+    line-height: 150%;
+    transition: 0.5s;
+}
+
+.footer__item a:hover{
+    color:var(--color3);
+}
+
+.footer__logo path{
+    fill: var(--color3);
+}
+.footer__elements{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.footer__item h4{ 
+    margin-bottom: 20px;
+    color: var(--color1);
+}
+
+.footer__item div{
+    display: flex;
+    gap: 30px ;
+    font-size: 20px;
+}
+footer{
+    padding: 60px 0 60px 0;
+    background-color: var(--color4);
+    border-radius: 20px 20px 0 0;
+}
+footer p{
+    text-align: right;
+    color: var(--color1);
+}
